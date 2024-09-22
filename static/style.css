@@ -127,16 +127,16 @@ body {
 /* Media queries para dispositivos móveis */
 @media (max-width: 768px) {
     .name {
-        font-size: 50px; /* Reduz o tamanho da fonte para telas menores */
+        font-size: 60px; /* Reduz o tamanho da fonte para telas menores */
         margin-top: 100px;
     }
 
     .zn {
         max-width: 50%;
-        margin-top: -465px;
+        margin-top: -30px;
     }
 
-    .akar-icons--linkedin-fill {
+    /* .akar-icons--linkedin-fill {
         width: 1.5em;
         height: 1.5em;
         margin-left: 20px;
@@ -156,5 +156,5 @@ body {
     .gn {
         margin-left: 0;
         justify-content: center;
-    }
+    } */
 }
