@@ -74,6 +74,18 @@ body {
     z-index: 2; /* Define um z-index maior */
 }
 
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gn {
+    margin-top: 40px;
+    max-width: 15%;
+    height: auto;
+}
+
 .zn {
     margin-top: -120px;
     max-width: 16%;
@@ -122,6 +134,25 @@ body {
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
+}
+
+.text {
+    margin: 50px;
+    padding: 80px;
+    border: 2px solid #ccc; /* Adiciona uma borda cinza clara */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+    background-color: #f9f9f9; /* Adiciona uma cor de fundo clara */
+    color: #333; /* Define a cor do texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    opacity: 0;
+    margin-top: 20px;
 }
 
 /* Media queries para dispositivos móveis */
