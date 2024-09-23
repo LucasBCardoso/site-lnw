@@ -78,6 +78,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%; /* Ensure the container spans full width */
+}
+
+.image-container a {
+    display: flex; /* Flexbox on the anchor too */
+    justify-content: center;
+    align-items: center;
 }
 
 .gn {
