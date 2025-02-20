@@ -38,6 +38,9 @@
             color: white;
             cursor: pointer;
         }
+        .dimmed-text {
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
@@ -54,7 +57,9 @@
             <p>Quer ser informado quando lançarmos o projeto?</p>
             <input type="email" id="email" placeholder="Digite seu e-mail" required>
             <button onclick="saveEmail()">Enviar</button>
+            <p class="dimmed-text">Clique em enviar e aguarde a notificação</p>
         </div>
+        <!-- <div><p>*Clique em enviar e aguarde a notificação*</p></div> -->
     </div>
     <script>
         function saveEmail() {
