@@ -3,42 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oi! Eu sou o Lucas ;)</title>
+    <title>Loja no Whats!</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         .centered-container {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
+            text-align: center;
+        }
+        .email-container p {
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .email-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .email-container input {
+            padding: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+        }
+        .email-container button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
         }
     </style>
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <text class="name">LUCAS CARDOSO</text>
-    <div class="bg1">
-        <img class="zn" src="assets/me.png" alt="Lucas">
-    </div>
     <div class="icons">
-        <a href="https://www.linkedin.com/in/lucasbrasilcardoso/" target="_blank" rel="noopener noreferrer">
-            <span class="akar-icons--linkedin-fill"></span>
+        <a href="https://instagram.com/lojanowhats" target="_blank" rel="noopener noreferrer">
+            <span><i class="fab fa-instagram"></i></span>
         </a>
-        <a href="https://github.com/LucasBCardoso" target="_blank" rel="noopener noreferrer">
-            <span class="mingcute--github-fill"></span>
-        </a>
-        <!-- <a href="https://www.greennext.com.br" target="_blank" rel="noopener noreferrer">
-            <img class="gn" src="assets/gn.png" alt="Green Next">
-        </a>-->
     </div>
-    <!-- <div class="bg2"></div>
-        <a href="https://www.greennext.com.br" target="_blank" rel="noopener noreferrer">
-            <img class="zn" src="assets/gn.png" alt="Green Next">
-        </a>
-    </div> -->
-    <!-- <div class="bg2"></div>
-        <text class="build">Build Fast // Deliver Faster</text>
-        <text class="soon">Em breve.</text>
-    </div> -->
+    <div class="centered-container">
+        <div class="bg1">
+            <img class="zn" src="assets/lnw.png" alt="Lucas">
+        </div>
+        <div class="email-container">
+            <p>Quer ser informado quando lançarmos o projeto?</p>
+            <input type="email" id="email" placeholder="Digite seu e-mail" required>
+            <button onclick="saveEmail()">Enviar</button>
+        </div>
+    </div>
+    <script>
+        function saveEmail() {
+            const email = document.getElementById('email').value;
+            if (email) {
+                fetch('https://script.google.com/macros/s/AKfycbzZ0iSyMiEx1n-JOMVp7Ez0__0RLZPPOPKYFv9ZRxPk0TOb_KiBDNTyXgjnBH8x_YP2Gw/exec', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams({
+                        'email': email
+                    })
+                })
+                .then(response => response.text())
+                .then(data => {
+                    alert(data);
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    alert('Ocorreu um erro ao salvar o e-mail.');
+                });
+            } else {
+                alert('Por favor, insira um e-mail válido.');
+            }
+        }
+    </script>
 </body>
 </html>
